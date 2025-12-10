@@ -1,0 +1,88 @@
+@define-color primary #D1A260;
+@define-color secondary #696969;
+@define-color background #1C1B1F;
+@define-color surface #212121;
+@define-color on-primary #FFF3DA;
+@define-color on-secondary #CAC4D0;
+@define-color on-background #E6E1E5;
+@define-color on-surface #F4EFF4;
+
+* {
+    font-family: "Iosevka Nerd Font", monospace;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+*:selected {
+    color: @on-primary;
+    background-color: @primary;
+}
+
+/* Window */
+window {
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid @on-primary;
+    border-radius: 0px;
+    background-color: @background;
+}
+
+/* Slide In */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Inner Box */
+#inner-box {
+    margin: 3px;
+    padding: 3px;
+    border: none;
+    background-color: @surface;
+}
+
+/* Outer Box */
+#outer-box {
+    margin: 3px;
+    padding: 3px;
+    border: none;
+    background-color: @surface;
+}
+
+/* Scroll */
+#scroll {
+    margin: 0px;
+    padding: 3px;
+    border: none;
+}
+
+/* Input */
+#input {
+    margin: 3px;
+    padding: 3px;
+    border: none;
+    color: @on-background;
+    background-color: @secondary;
+}
+
+/* Text */
+#text {
+    margin: 3px;
+    padding: 3px;
+    border: none;
+    color: @on-surface;
+}
+
+/* Selected Entry */
+#entry:selected {
+    background-color: @primary;
+    border-radius: 0px;
+}
+
+#entry:selected #text {
+    color: @on-primary;
+}

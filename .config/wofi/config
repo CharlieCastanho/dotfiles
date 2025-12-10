@@ -1,0 +1,8 @@
+show=drun
+width=450
+height=280
+always_parse_args=true
+show_all=false
+print_command=true
+insensitive=true
+prompt= what ya lookin for?

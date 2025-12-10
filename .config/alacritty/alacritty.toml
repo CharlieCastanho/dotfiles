@@ -1,0 +1,6 @@
+[font]
+size = 8
+
+[window.padding]
+x = 5   # left + right
+y = 5    # top + bottom
