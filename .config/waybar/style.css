@@ -10,20 +10,24 @@ window#waybar {
     border: none;
 }
 
-.modules-left {
-    padding: 0;
-}
-
-.modules-right {
-    padding: 0;
-}
-
+/* --- Layout Containers --- */
+.modules-left,
+.modules-right,
 .modules-center {
     padding: 0;
 }
 
+/* Base block background (Surface0 / Surface1 depending on opacity) */
+.block {
+    background-color: #1E1E2E; /* base */
+    border-radius: 4px;
+    padding: 2px 8px;
+    margin: 0;
+}
+
+/* --- Workspaces --- */
 #workspaces {
-    background-color: #202020;
+    background-color: #1E1E2E; /* base */
     border-radius: 4px;
     padding: 2px 4px;
     margin: 0;
@@ -33,11 +37,27 @@ window#waybar {
     min-height: 0;
     padding: 0 7px;
     margin-right: 2px;
-    color: #f5e0dc;
+    color: #CDD6F4; /* text */
 }
 
+/* Empty workspace */
+#workspaces button.empty {
+    color: #BAC2DE; /* subtext1 */
+}
+
+/* Visible workspace */
+#workspaces button.visible {
+    color: #94E2D5; /* teal */
+}
+
+/* Active workspace */
+#workspaces button.active {
+    color: #89B4FA; /* blue */
+}
+
+/* Urgent workspace */
 #workspaces button.urgent {
-    color: #f5e0dc;
+    color: #F38BA8; /* red */
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -45,123 +65,124 @@ window#waybar {
     animation-direction: alternate;
 }
 
-#workspaces button.empty {
-    color: #cdd6f4;
-}
-
-#workspaces button.visible {
-    color: #89dceb;
-}
-
-#workspaces button.active {
-    color: #fab387;
-}
-
 @keyframes blink {
     to {
-        color: #202020;
-        background-color: #dcf5f3;
+        color: #1E1E2E;               /* base */
+        background-color: #F5E0DC;    /* rosewater */
     }
 }
 
+/* --- Launcher --- */
 #custom-launcher {
-    background-color: #202020;
+    background-color: #1E1E2E; /* base */
     border-radius: 4px;
     padding: 2px 8px;
     margin: 0;
-    color: #89dceb;
+    color: #B4BEFE; /* lavender */
 }
 
+/* --- Power --- */
 #custom-power {
-    background-color: #202020;
+    background-color: #1E1E2E;
     border-radius: 4px;
     padding: 2px 10px;
     margin: 0;
+    color: #F38BA8; /* red */
 }
 
+/* --- CPU --- */
 #cpu {
-    background-color: #202020;
+    background-color: #1E1E2E;
     border-radius: 4px;
     padding: 2px 10px 2px 12px;
     margin: 0;
-    color: #f2cdcd;
+    color: #F38BA8; /* red fits CPU heat theme */
 }
 
+/* --- Memory --- */
 #memory {
-    background-color: #202020;
+    background-color: #1E1E2E;
     border-radius: 4px;
     padding: 2px 10px 2px 12px;
     margin: 0;
-    color: #fab387;
+    color: #F9E2AF; /* yellow */
 }
 
+/* --- Wireplumber / Volume --- */
 #wireplumber {
-    background-color: #202020;
+    background-color: #1E1E2E;
     border-radius: 4px;
     padding: 2px 10px 2px 12px;
     margin: 0;
-    color: #f9e2af;
+    color: #A6E3A1; /* green */
 }
 
 #wireplumber.muted {
-    color: #f38ba8;
+    color: #F38BA8; /* red */
 }
 
+/* --- Clock --- */
 #clock {
-    background-color: #202020;
+    background-color: #1E1E2E;
     border-radius: 4px;
     padding: 2px 10px;
     margin: 0;
-    color: #94e2d5;
+    color: #94E2D5; /* teal */
 }
 
+/* --- Network --- */
 #network {
-    background-color: #202020;
-    color: #cdd6f4;
+    background-color: #1E1E2E;
+    color: #CDD6F4; /* text */
     border-radius: 4px;
     padding: 2px 10px;
     margin: 0;
 }
 
 #network.disabled {
-    color: #f38ba8;
+    color: #F38BA8; /* red */
 }
 
+/* --- Tray --- */
 #tray {
-    background-color: #202020;
+    background-color: #1E1E2E;
     border-radius: 4px;
     padding: 2px 10px;
     margin: 0;
 }
 
+/* --- Battery --- */
 #battery {
-    background-color: #202020;
-    color: #cdd6f4;
+    background-color: #1E1E2E;
+    color: #A6ADC8; /* subtext0 */
     border-radius: 4px;
     padding: 2px 10px;
     margin: 0;
 }
 
+/* --- Backlight --- */
 #backlight {
-    background-color: #202020;
-    color: #cdd6f4;
+    background-color: #1E1E2E;
+    color: #CDD6F4;
     border-radius: 4px;
     padding: 2px 10px;
     margin: 0;
 }
 
+/* --- Fan sensor --- */
 #custom-fan {
-    background-color: #202020;
+    background-color: #1E1E2E;
     border-radius: 4px;
     padding: 2px 10px 2px 12px;
     margin: 0;
-    color: #89b4fa; /* blue-ish → fits "system sensors" theme */
+    color: #89B4FA; /* blue */
 }
 
+/* --- Disk usage --- */
 #custom-disk {
-    background-color: #202020;
+    background-color: #1E1E2E;
     border-radius: 4px;
     padding: 2px 10px 2px 12px;
     margin: 0;
-    color: #a6e3a1; /* green → fits "storage/space" semantics */
+    color: #A6E3A1; /* green */
 }

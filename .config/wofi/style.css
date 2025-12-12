@@ -1,12 +1,14 @@
-@define-color primary #D1A260;
-@define-color secondary #696969;
-@define-color background #1C1B1F;
-@define-color surface #212121;
-@define-color on-primary #FFF3DA;
-@define-color on-secondary #CAC4D0;
-@define-color on-background #E6E1E5;
-@define-color on-surface #F4EFF4;
+/* Catppuccin-Mocha Colors (from your Alacritty theme) */
+@define-color background #1E1E2E;      /* base */
+@define-color surface    #45475A;      /* surface1 */
+@define-color primary    #89B4FA;      /* blue (highlight) */
+@define-color secondary  #585B70;      /* surface2 */
+@define-color on-primary #1E1E2E;      /* base (text on highlight) */
+@define-color on-surface #CDD6F4;      /* text */
+@define-color on-background #CDD6F4;   /* text */
+@define-color border-color #A6ADC8;    /* subtext0 */
 
+/* General */
 * {
     font-family: "Iosevka Nerd Font", monospace;
     font-weight: bold;
@@ -22,12 +24,12 @@
 window {
     margin: 0px;
     padding: 0px;
-    border: 1px solid @on-primary;
-    border-radius: 0px;
+    border: 1px solid @border-color;
+    border-radius: 6px;
     background-color: @background;
 }
 
-/* Slide In */
+/* Fade animation for smoothness */
 @keyframes slideIn {
     0% {
         opacity: 0;
@@ -60,16 +62,17 @@ window {
     border: none;
 }
 
-/* Input */
+/* Input box */
 #input {
     margin: 3px;
-    padding: 3px;
+    padding: 6px;
     border: none;
     color: @on-background;
     background-color: @secondary;
+    border-radius: 4px;
 }
 
-/* Text */
+/* Entry text */
 #text {
     margin: 3px;
     padding: 3px;
@@ -80,7 +83,7 @@ window {
 /* Selected Entry */
 #entry:selected {
     background-color: @primary;
-    border-radius: 0px;
+    border-radius: 4px;
 }
 
 #entry:selected #text {
