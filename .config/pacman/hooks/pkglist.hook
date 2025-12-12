@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Update pkglist backup
+When = PostTransaction
+Exec = /bin/sh -c '/usr/bin/pacman -Qqe | grep -Ev "^(intel-ucode|amd-ucode|xf86-video-intel|nvidia|nvidia-utils)$" > /etc/pkglist.txt'
